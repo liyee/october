@@ -1,0 +1,21 @@
+title = "Blog Category"
+url = "/blog-category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog"
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = 'blog';
+}
+?>
+==

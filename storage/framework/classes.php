@@ -80,4 +80,6 @@
   'Martin\\Forms\\Components\\UploadForm' => 'plugins\\martin\\forms\\components\\UploadForm.php',
   'Martin\\Forms\\Components\\EmptyForm' => 'plugins\\martin\\forms\\components\\EmptyForm.php',
   'martin\\forms\\Controllers\\exports' => 'plugins\\martin\\forms\\controllers\\exports.php',
+  'cms\\Controllers\\themeoptions' => 'modules\\cms\\controllers\\themeoptions.php',
+  'backend\\Controllers\\preferences' => 'modules\\backend\\controllers\\preferences.php',
 );
