@@ -1,0 +1,38 @@
+1569396162a:1:{s:15:"blog-layout.htm";a:6:{s:8:"fileName";s:15:"blog-layout.htm";s:7:"content";s:385:";;
+description = "Blog Layout"
+==
+{##}
+<!doctype html>
+<html lang="en">
+<head>
+{% partial 'site/meta' %}
+</head>
+<body>
+{# Header with TopBar #}
+{% partial 'site/header' %}
+<div class="main-wrapper">{# Main Wrapper #}
+{% partial 'site/blogintroheader' %}
+{% page %}
+{% partial 'site/footer' %}
+</div>{# End Main Wrapper #}
+{# JavaScripts #}
+{% partial 'site/scripts' %}
+</body>
+</html>";s:5:"mtime";i:1569395522;s:6:"markup";s:351:"{##}
+<!doctype html>
+<html lang="en">
+<head>
+{% partial 'site/meta' %}
+</head>
+<body>
+{# Header with TopBar #}
+{% partial 'site/header' %}
+<div class="main-wrapper">{# Main Wrapper #}
+{% partial 'site/blogintroheader' %}
+{% page %}
+{% partial 'site/footer' %}
+</div>{# End Main Wrapper #}
+{# JavaScripts #}
+{% partial 'site/scripts' %}
+</body>
+</html>";s:4:"code";N;s:11:"description";s:11:"Blog Layout";}}

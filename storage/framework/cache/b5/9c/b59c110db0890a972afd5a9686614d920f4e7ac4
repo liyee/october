@@ -1,0 +1,28 @@
+1569396164a:1:{s:24:"site/blogintroheader.htm";a:6:{s:8:"fileName";s:24:"site/blogintroheader.htm";s:7:"content";s:444:";;
+description = "Blog Intro Header"
+==
+{##}
+<section class="page-title bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <span class="text-white">Our blog</span>
+                    <h1 class="text-capitalize mb-4 text-lg">{{ this.page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>";s:5:"mtime";i:1569395522;s:6:"markup";s:404:"{##}
+<section class="page-title bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <span class="text-white">Our blog</span>
+                    <h1 class="text-capitalize mb-4 text-lg">{{ this.page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>";s:4:"code";N;s:11:"description";s:17:"Blog Intro Header";}}

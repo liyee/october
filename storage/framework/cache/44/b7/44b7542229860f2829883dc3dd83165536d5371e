@@ -1,0 +1,34 @@
+1569400980a:1:{s:16:"site/scripts.htm";a:6:{s:8:"fileName";s:16:"site/scripts.htm";s:7:"content";s:710:";;
+description = "Essential Scripts"
+==
+{##}
+<script src="{{ [
+    'assets/plugins/jquery/jquery.js',
+    '@framework',
+    '@framework.extras',
+    'assets/plugins/bootstrap/js/popper.js',
+    'assets/plugins/bootstrap/js/bootstrap.min.js',
+    'assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'assets/plugins/slick-carousel/slick/slick.min.js',
+    'assets/plugins/counterup/jquery.waypoints.min.js',
+    'assets/plugins/counterup/jquery.counterup.min.js',
+    'assets/plugins/google-map/map.js',
+    'assets/js/script.js'
+]|theme }}"></script>
+{# Google Map #}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>";s:5:"mtime";i:1569395522;s:6:"markup";s:670:"{##}
+<script src="{{ [
+    'assets/plugins/jquery/jquery.js',
+    '@framework',
+    '@framework.extras',
+    'assets/plugins/bootstrap/js/popper.js',
+    'assets/plugins/bootstrap/js/bootstrap.min.js',
+    'assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'assets/plugins/slick-carousel/slick/slick.min.js',
+    'assets/plugins/counterup/jquery.waypoints.min.js',
+    'assets/plugins/counterup/jquery.counterup.min.js',
+    'assets/plugins/google-map/map.js',
+    'assets/js/script.js'
+]|theme }}"></script>
+{# Google Map #}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>";s:4:"code";N;s:11:"description";s:17:"Essential Scripts";}}
