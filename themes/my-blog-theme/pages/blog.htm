@@ -11,4 +11,18 @@ sortOrder = "published_at desc"
 categoryPage = "blog"
 postPage = "blog"
 ==
-{% component 'blogPosts' %}
+function onHandleForm()
+{
+    $this['lastValue'] = post('value');
+}
+function onEnd()
+{
+    $this->page->title = 'A different page title';
+}
+==
+{{ form_open({ request: 'onHandleForm' }) }}
+    Please enter a string: <input type="text" name="value"/>
+    <input type="submit" value="Submit me!"/>
+{{ form_close() }}
+<p>Last submitted value: {{ lastValue }}</p>
+<p>The title of this page is: {{ this.page.title }}</p>

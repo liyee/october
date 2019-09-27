@@ -82,4 +82,8 @@
   'martin\\forms\\Controllers\\exports' => 'plugins\\martin\\forms\\controllers\\exports.php',
   'cms\\Controllers\\themeoptions' => 'modules\\cms\\controllers\\themeoptions.php',
   'backend\\Controllers\\preferences' => 'modules\\backend\\controllers\\preferences.php',
+  'system\\Controllers\\eventlogs' => 'modules\\system\\controllers\\eventlogs.php',
+  'system\\Controllers\\mailtemplates' => 'modules\\system\\controllers\\mailtemplates.php',
+  'system\\Controllers\\mailbrandsettings' => 'modules\\system\\controllers\\mailbrandsettings.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
 );

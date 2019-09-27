@@ -1,6 +1,7 @@
 .DS_Store
 *.log
-storage/*
-storage/cms
-storage/framework
-
+storage/cms/cache/
+storage/cms/combiner/
+storage/cms/twig/
+storage/framework/cache/
+storage/framework/sessions/
