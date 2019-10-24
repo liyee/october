@@ -1,13 +1,9 @@
 name: 'Top menu - left'
 items:
     -
-        title: 'New menu item'
-        nesting: ''
+        title: 'All Static'
         type: all-static-pages
-        url: ''
         code: ''
-        reference: ''
-        cmsPage: ''
         replace: '1'
         viewBag:
             isHidden: '0'
@@ -15,9 +11,13 @@ items:
             isExternal: '0'
     -
         title: Blog
+        nesting: ''
         type: cms-page
+        url: ''
         code: blog
         reference: blog
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

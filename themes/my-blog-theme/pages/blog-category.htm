@@ -1,5 +1,5 @@
 title = "Blog Category"
-url = "/blog-category/:slug/:page?"
+url = "/blog/category/:slug"
 layout = "default"
 is_hidden = 0
 
@@ -11,11 +11,26 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog"
 postPage = "blog"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
 ==
 <?php
-function onInit()
+function onEnd()
 {
-    $this['activeMenuItem'] = 'blog';
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
 }
 ?>
 ==
+{% if not category %}
+{% component 'blogCategories' %}
+    <h2>Category not found</h2>
+{% else %}
+    <h2>{{ category.name }}</h2>
+
+    
+{% endif %}{% component 'blogPosts' %}
