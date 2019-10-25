@@ -86,4 +86,9 @@
   'system\\Controllers\\mailtemplates' => 'modules\\system\\controllers\\mailtemplates.php',
   'system\\Controllers\\mailbrandsettings' => 'modules\\system\\controllers\\mailbrandsettings.php',
   'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
+  'cms\\Controllers\\themelogs' => 'modules\\cms\\controllers\\themelogs.php',
+  'rainlab\\weather\\Plugin' => 'plugins\\rainlab\\weather\\Plugin.php',
+  'RainLab\\Weather\\Components\\Weather' => 'plugins\\rainlab\\weather\\components\\Weather.php',
+  'rainlab\\product\\Plugin' => 'plugins\\rainlab\\product\\Plugin.php',
+  'RainLab\\Product\\Components\\Product' => 'plugins\\rainlab\\product\\components\\Product.php',
 );

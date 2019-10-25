@@ -1,0 +1,21 @@
+title = "weather"
+url = "/weather"
+layout = "default"
+is_hidden = 0
+
+[weather]
+country = "ca"
+state = "bc"
+city = "Vancouver"
+units = "metric"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather component example</title>
+        {% styles %}
+    </head>
+    <body>
+        {% component 'weather' %}
+    </body>
+</html>
