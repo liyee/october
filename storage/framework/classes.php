@@ -91,4 +91,7 @@
   'RainLab\\Weather\\Components\\Weather' => 'plugins\\rainlab\\weather\\components\\Weather.php',
   'rainlab\\product\\Plugin' => 'plugins\\rainlab\\product\\Plugin.php',
   'RainLab\\Product\\Components\\Product' => 'plugins\\rainlab\\product\\components\\Product.php',
+  'liyee\\product\\Plugin' => 'plugins\\liyee\\product\\Plugin.php',
+  'liyee\\weather\\Plugin' => 'plugins\\liyee\\weather\\Plugin.php',
+  'Liyee\\Product\\Components\\Product' => 'plugins\\liyee\\product\\components\\Product.php',
 );

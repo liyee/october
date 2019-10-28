@@ -1,4 +1,4 @@
-<?php namespace RainLab\Weather\Components;
+<?php namespace Liyee\Weather\Components;
 
 use Cache;
 use Request;

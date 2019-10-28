@@ -1,4 +1,4 @@
-<?php namespace RainLab\Weather;
+<?php namespace Liyee\Weather;
 
 use System\Classes\PluginBase;
 
