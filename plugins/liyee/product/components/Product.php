@@ -1,4 +1,4 @@
-<?php namespace RainLab\Product\Components;
+<?php namespace Liyee\Product\Components;
 
 use Cms\Classes\ComponentBase;
 

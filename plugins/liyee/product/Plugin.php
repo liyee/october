@@ -1,4 +1,4 @@
-<?php namespace RainLab\Product;
+<?php namespace Liyee\Product;
 
 use System\Classes\PluginBase;
 
@@ -18,7 +18,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            '\RainLab\Product\Components\Product' => 'product'
+            '\Liyee\Product\Components\Product' => 'product'
         ];
     }
 }

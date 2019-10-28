@@ -1,5 +1,5 @@
 <?php
-namespace Acme\Blog\Controllers;
+namespace Liyee\Product\Controllers;
 
 class Products extends \Backend\Classes\Controller {
 

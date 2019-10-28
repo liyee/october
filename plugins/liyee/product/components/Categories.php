@@ -1,4 +1,4 @@
-<?php namespace RainLab\Blog\Components;
+<?php namespace Liyee\Product\Components;
 
 use Db;
 use Carbon\Carbon;
