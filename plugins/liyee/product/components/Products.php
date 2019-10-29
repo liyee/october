@@ -3,9 +3,15 @@ namespace Liyee\Product\Controllers;
 
 class Products extends \Backend\Classes\Controller {
 
-    public function index()    // <=== Action method
-    {
-
+    public function componentDetails(){
+        return [
+            'name' => 'Products',
+            'description' => 'Displays a collection of product posts.'
+        ];
+    }
+    
+    public function products(){
+        return ['First Product', 'Second Product', 'Third Product'];   
     }
 }
 ?>

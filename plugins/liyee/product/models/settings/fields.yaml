@@ -1,0 +1,9 @@
+tabs:
+    fields:
+        show_all_posts:
+            span: left
+            label: liyee.product::lang.product.show_all_posts_label
+            comment: liyee.product::lang.product.show_all_posts_comment
+            type: switch
+            default: 1
+            tab: liyee.product::lang.product.tab_general

@@ -3,8 +3,8 @@
 use Db;
 use Carbon\Carbon;
 use Cms\Classes\Page;
-use RainLab\Blog\Classes\ComponentAbstract;
-use RainLab\Blog\Models\Category as BlogCategory;
+use Liyee\Product\Classes\ComponentAbstract;
+use Liyee\Product\Models\Category as BlogCategory;
 
 class Categories extends ComponentAbstract
 {
