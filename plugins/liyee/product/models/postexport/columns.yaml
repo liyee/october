@@ -5,14 +5,14 @@
 columns:
 
     id: ID
-    title: rainlab.blog::lang.post.title
-    content: rainlab.blog::lang.post.content
-    content_html: rainlab.blog::lang.post.content_html
-    excerpt: rainlab.blog::lang.post.excerpt
-    slug: rainlab.blog::lang.post.slug
-    categories: rainlab.blog::lang.post.categories
-    author_email: rainlab.blog::lang.post.author_email
-    featured_image_urls: rainlab.blog::lang.post.featured_images
-    created_at: rainlab.blog::lang.post.created_date
-    updated_at: rainlab.blog::lang.post.updated_date
-    published_at: rainlab.blog::lang.post.published_date
+    title: liyee.product::lang.post.title
+    content: liyee.product::lang.post.content
+    content_html: liyee.product::lang.post.content_html
+    excerpt: liyee.product::lang.post.excerpt
+    slug: liyee.product::lang.post.slug
+    categories: liyee.product::lang.post.categories
+    author_email: liyee.product::lang.post.author_email
+    featured_image_urls: liyee.product::lang.post.featured_images
+    created_at: liyee.product::lang.post.created_date
+    updated_at: liyee.product::lang.post.updated_date
+    published_at: liyee.product::lang.post.published_date

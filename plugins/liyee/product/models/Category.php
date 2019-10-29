@@ -13,7 +13,7 @@ class Category extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\NestedTree;
 
-    public $table = 'rainlab_blog_categories';
+    public $table = 'rainlab_product_categories';
     public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
 
     /*
@@ -21,8 +21,8 @@ class Category extends Model
      */
     public $rules = [
         'name' => 'required',
-        'slug' => 'required|between:3,64|unique:rainlab_blog_categories',
-        'code' => 'nullable|unique:rainlab_blog_categories',
+        'slug' => 'required|between:3,64|unique:liyee_product_categories',
+        'code' => 'nullable|unique:liyee_product_categories',
     ];
 
     /**
@@ -38,7 +38,7 @@ class Category extends Model
 
     public $belongsToMany = [
         'posts' => ['Liyee\Product\Models\Post',
-            'table' => 'rainlab_blog_posts_categories',
+            'table' => 'liyee_product_posts_categories',
             'order' => 'published_at desc',
             'scope' => 'isPublished'
         ],
@@ -118,7 +118,7 @@ class Category extends Model
     {
         $result = [];
 
-        if ($type == 'blog-category') {
+        if ($type == 'product-category') {
             $result = [
                 'references'   => self::listSubCategoryOptions(),
                 'nesting'      => true,
@@ -126,7 +126,7 @@ class Category extends Model
             ];
         }
 
-        if ($type == 'all-blog-categories') {
+        if ($type == 'all-product-categories') {
             $result = [
                 'dynamicItems' => true
             ];
@@ -138,7 +138,7 @@ class Category extends Model
             $pages = CmsPage::listInTheme($theme, true);
             $cmsPages = [];
             foreach ($pages as $page) {
-                if (!$page->hasComponent('blogPosts')) {
+                if (!$page->hasComponent('productPosts')) {
                     continue;
                 }
 
@@ -146,7 +146,7 @@ class Category extends Model
                  * Component must use a category filter with a routing parameter
                  * eg: categoryFilter = "{{ :somevalue }}"
                  */
-                $properties = $page->getComponentProperties('blogPosts');
+                $properties = $page->getComponentProperties('productPosts');
                 if (!isset($properties['categoryFilter']) || !preg_match('/{{\s*:/', $properties['categoryFilter'])) {
                     continue;
                 }
@@ -206,7 +206,7 @@ class Category extends Model
     {
         $result = null;
 
-        if ($item->type == 'blog-category') {
+        if ($item->type == 'product-category') {
             if (!$item->reference || !$item->cmsPage) {
                 return;
             }
@@ -254,7 +254,7 @@ class Category extends Model
                 $result['items'] = $iterator($categories);
             }
         }
-        elseif ($item->type == 'all-blog-categories') {
+        elseif ($item->type == 'all-product-categories') {
             $result = [
                 'items' => []
             ];
@@ -290,7 +290,7 @@ class Category extends Model
             return;
         }
 
-        $properties = $page->getComponentProperties('blogPosts');
+        $properties = $page->getComponentProperties('productPosts');
         if (!isset($properties['categoryFilter'])) {
             return;
         }

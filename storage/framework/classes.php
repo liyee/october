@@ -96,4 +96,5 @@
   'Liyee\\Product\\Components\\Product' => 'plugins\\liyee\\product\\components\\Product.php',
   'Liyee\\Weather\\Components\\Weather' => 'plugins\\liyee\\weather\\components\\Weather.php',
   'liyee\\product\\Controllers\\posts' => 'plugins\\liyee\\product\\controllers\\posts.php',
+  'liyee\\product\\Controllers\\categories' => 'plugins\\liyee\\product\\controllers\\categories.php',
 );

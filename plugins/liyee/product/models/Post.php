@@ -1,4 +1,4 @@
-<?php namespace RainLab\Blog\Models;
+<?php namespace Liyee\Product\Models;
 
 use Db;
 use Url;
@@ -15,7 +15,7 @@ use Carbon\Carbon;
 use Cms\Classes\Page as CmsPage;
 use Cms\Classes\Theme;
 use Cms\Classes\Controller;
-use RainLab\Blog\Classes\TagProcessor;
+use Liyee\Product\Classes\TagProcessor;
 
 /**
  * Class Post
@@ -24,7 +24,7 @@ class Post extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
-    public $table = 'rainlab_blog_posts';
+    public $table = 'liyee_product_posts';
     public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
 
     /*
@@ -32,7 +32,7 @@ class Post extends Model
      */
     public $rules = [
         'title'   => 'required',
-        'slug'    => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:rainlab_blog_posts'],
+        'slug'    => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:liyee_product_posts'],
         'content' => 'required',
         'excerpt' => ''
     ];
@@ -65,15 +65,15 @@ class Post extends Model
      * @var array
      */
     public static $allowedSortingOptions = [
-        'title asc'         => 'rainlab.blog::lang.sorting.title_asc',
-        'title desc'        => 'rainlab.blog::lang.sorting.title_desc',
-        'created_at asc'    => 'rainlab.blog::lang.sorting.created_asc',
-        'created_at desc'   => 'rainlab.blog::lang.sorting.created_desc',
-        'updated_at asc'    => 'rainlab.blog::lang.sorting.updated_asc',
-        'updated_at desc'   => 'rainlab.blog::lang.sorting.updated_desc',
-        'published_at asc'  => 'rainlab.blog::lang.sorting.published_asc',
-        'published_at desc' => 'rainlab.blog::lang.sorting.published_desc',
-        'random'            => 'rainlab.blog::lang.sorting.random'
+        'title asc'         => 'liyee.product::lang.sorting.title_asc',
+        'title desc'        => 'liyee.product::lang.sorting.title_desc',
+        'created_at asc'    => 'liyee.product::lang.sorting.created_asc',
+        'created_at desc'   => 'liyee.product::lang.sorting.created_desc',
+        'updated_at asc'    => 'liyee.product::lang.sorting.updated_asc',
+        'updated_at desc'   => 'liyee.product::lang.sorting.updated_desc',
+        'published_at asc'  => 'liyee.product::lang.sorting.published_asc',
+        'published_at desc' => 'liyee.product::lang.sorting.published_desc',
+        'random'            => 'liyee.product::lang.sorting.random'
     ];
 
     /*
@@ -85,8 +85,8 @@ class Post extends Model
 
     public $belongsToMany = [
         'categories' => [
-            'RainLab\Blog\Models\Category',
-            'table' => 'rainlab_blog_posts_categories',
+            'Liyee\Product\Models\Category',
+            'table' => 'liyee_product_posts_categories',
             'order' => 'name'
         ]
     ];
@@ -118,7 +118,7 @@ class Post extends Model
 
         $user = BackendAuth::getUser();
 
-        if (!$user->hasAnyAccess(['rainlab.blog.access_publish'])) {
+        if (!$user->hasAnyAccess(['liyee.product.access_publish'])) {
             $fields->published->hidden = true;
             $fields->published_at->hidden = true;
         }
@@ -132,7 +132,7 @@ class Post extends Model
     {
         if ($this->published && !$this->published_at) {
             throw new ValidationException([
-               'published_at' => Lang::get('rainlab.blog::lang.post.published_validation')
+               'published_at' => Lang::get('liyee.product::lang.post.published_validation')
             ]);
         }
     }
@@ -183,7 +183,7 @@ class Post extends Model
      */
     public function canEdit(User $user)
     {
-        return ($this->user_id == $user->id) || $user->hasAnyAccess(['rainlab.blog.access_other_posts']);
+        return ($this->user_id == $user->id) || $user->hasAnyAccess(['liyee.product.access_other_posts']);
     }
 
     public static function formatHtml($input, $preview = false)
@@ -475,7 +475,7 @@ class Post extends Model
     {
         $result = [];
 
-        if ($type == 'blog-post') {
+        if ($type == 'product-post') {
             $references = [];
 
             $posts = self::orderBy('title')->get();
@@ -490,13 +490,13 @@ class Post extends Model
             ];
         }
 
-        if ($type == 'all-blog-posts') {
+        if ($type == 'all-product-posts') {
             $result = [
                 'dynamicItems' => true
             ];
         }
 
-        if ($type == 'category-blog-posts') {
+        if ($type == 'category-product-posts') {
             $references = [];
 
             $categories = Category::orderBy('name')->get();
@@ -517,7 +517,7 @@ class Post extends Model
             $cmsPages = [];
 
             foreach ($pages as $page) {
-                if (!$page->hasComponent('blogPost')) {
+                if (!$page->hasComponent('productPost')) {
                     continue;
                 }
 
@@ -525,7 +525,7 @@ class Post extends Model
                  * Component must use a categoryPage filter with a routing parameter and post slug
                  * eg: categoryPage = "{{ :somevalue }}", slug = "{{ :somevalue }}"
                  */
-                $properties = $page->getComponentProperties('blogPost');
+                $properties = $page->getComponentProperties('productPost');
                 if (!isset($properties['categoryPage']) || !preg_match('/{{\s*:/', $properties['slug'])) {
                     continue;
                 }
@@ -561,7 +561,7 @@ class Post extends Model
     {
         $result = null;
 
-        if ($item->type == 'blog-post') {
+        if ($item->type == 'product-post') {
             if (!$item->reference || !$item->cmsPage) {
                 return;
             }
@@ -583,7 +583,7 @@ class Post extends Model
             $result['isActive'] = $pageUrl == $url;
             $result['mtime'] = $category->updated_at;
         }
-        elseif ($item->type == 'all-blog-posts') {
+        elseif ($item->type == 'all-product-posts') {
             $result = [
                 'items' => []
             ];
@@ -604,7 +604,7 @@ class Post extends Model
                 $result['items'][] = $postItem;
             }
         }
-        elseif ($item->type == 'category-blog-posts') {
+        elseif ($item->type == 'category-product-posts') {
             if (!$item->reference || !$item->cmsPage) {
                 return;
             }
@@ -658,7 +658,7 @@ class Post extends Model
             return;
         }
 
-        $properties = $page->getComponentProperties('blogPost');
+        $properties = $page->getComponentProperties('productPost');
         if (!isset($properties['slug'])) {
             return;
         }
