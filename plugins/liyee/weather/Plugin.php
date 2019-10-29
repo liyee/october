@@ -18,7 +18,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            '\RainLab\Weather\Components\Weather' => 'weather'
+            '\Liyee\Weather\Components\Weather' => 'weather'
         ];
     }
 }

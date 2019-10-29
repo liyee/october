@@ -87,7 +87,7 @@ class Weather extends ComponentBase
     
     public function onRun()
     {
-        $this->addCss('/plugins/rainlab/weather/assets/css/weather.css');
+        $this->addCss('/plugins/liyee/weather/assets/css/weather.css');
         $this->page['weatherInfo'] = $this->info();
     }
 }

@@ -94,4 +94,5 @@
   'liyee\\product\\Plugin' => 'plugins\\liyee\\product\\Plugin.php',
   'liyee\\weather\\Plugin' => 'plugins\\liyee\\weather\\Plugin.php',
   'Liyee\\Product\\Components\\Product' => 'plugins\\liyee\\product\\components\\Product.php',
+  'Liyee\\Weather\\Components\\Weather' => 'plugins\\liyee\\weather\\components\\Weather.php',
 );

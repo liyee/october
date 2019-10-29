@@ -6,7 +6,7 @@ return [
         'description' => 'A robust merchandise management platform.'
     ],
     'product' => [
-        'menu_label' => 'Blog',
+        'menu_label' => 'Product',
         'menu_description' => 'Manage Blog Posts',
         'posts' => 'Posts',
         'create_post' => 'Blog post',
