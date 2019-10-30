@@ -2,15 +2,15 @@
 #  Form Behavior Config
 # ===================================
 
-name: rainlab.blog::lang.blog.create_post
-form: ~/plugins/rainlab/blog/models/post/fields.yaml
+name: liyee.product::lang.product.create_post
+form: ~/plugins/liyee/product/models/post/fields.yaml
 modelClass: RainLab\Blog\Models\Post
-defaultRedirect: rainlab/blog/posts
+defaultRedirect: liyee/product/posts
 
 create:
-    redirect: rainlab/blog/posts/update/:id
-    redirectClose: rainlab/blog/posts
+    redirect: liyee/product/posts/update/:id
+    redirectClose: liyee/product/posts
 
 update:
-    redirect: rainlab/blog/posts
-    redirectClose: rainlab/blog/posts
+    redirect: liyee/product/posts
+    redirectClose: liyee/product/posts

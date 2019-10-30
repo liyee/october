@@ -46,7 +46,7 @@ class Plugin extends PluginBase
                         'label'       => 'liyee.product::lang.posts.new_post',
                         'icon'        => 'icon-plus',
                         'url'         => Backend::url('liyee/product/posts/create'),
-                        'permissions' => ['rainlab.product.access_posts']
+                        'permissions' => ['liyee.product.access_posts']
                     ],
                     'posts' => [
                         'label'       => 'liyee.product::lang.product.posts',
@@ -98,4 +98,35 @@ class Plugin extends PluginBase
             }
         });
     }
+    
+    public function registerPermissions()
+    {
+        return [
+            'liyee.product.manage_settings' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.manage_settings'
+            ],
+            'liyee.product.access_posts' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_posts'
+            ],
+            'liyee.product.access_categories' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_categories'
+            ],
+            'liyee.product.access_other_posts' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_other_posts'
+            ],
+            'liyee.product.access_import_export' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_import_export'
+            ],
+            'liyee.product.access_publish' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_publish'
+            ]
+        ];
+    }
+    
 }

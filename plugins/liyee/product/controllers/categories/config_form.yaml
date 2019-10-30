@@ -2,15 +2,15 @@
 #  Form Behavior Config
 # ===================================
 
-name: rainlab.blog::lang.blog.create_category
-form: ~/plugins/rainlab/blog/models/category/fields.yaml
+name: liyee.product::lang.product.create_category
+form: ~/plugins/liyee/product/models/category/fields.yaml
 modelClass: RainLab\Blog\Models\Category
-defaultRedirect: rainlab/blog/categories
+defaultRedirect: liyee/product/categories
 
 create:
-    redirect: rainlab/blog/categories/update/:id
-    redirectClose: rainlab/blog/categories
+    redirect: liyee/product/categories/update/:id
+    redirectClose: liyee/product/categories
 
 update:
-    redirect: rainlab/blog/categories
-    redirectClose: rainlab/blog/categories
+    redirect: liyee/product/categories
+    redirectClose: liyee/product/categories
