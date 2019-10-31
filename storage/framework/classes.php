@@ -99,4 +99,11 @@
   'liyee\\product\\Controllers\\categories' => 'plugins\\liyee\\product\\controllers\\categories.php',
   'Liyee\\Product\\Models\\Category' => 'plugins\\liyee\\product\\models\\Category.php',
   'Liyee\\Product\\Models\\Post' => 'plugins\\liyee\\product\\models\\Post.php',
+  'Liyee\\Product\\Models\\PostImport' => 'plugins\\liyee\\product\\models\\PostImport.php',
+  'Liyee\\Product\\Models\\PostExport' => 'plugins\\liyee\\product\\models\\PostExport.php',
+  'Liyee\\Product\\Components\\Post' => 'plugins\\liyee\\product\\components\\Post.php',
+  'Liyee\\Product\\Components\\Posts' => 'plugins\\liyee\\product\\components\\Posts.php',
+  'Liyee\\Product\\Classes\\ComponentAbstract' => 'plugins\\liyee\\product\\classes\\ComponentAbstract.php',
+  'Liyee\\Product\\Components\\Categories' => 'plugins\\liyee\\product\\components\\Categories.php',
+  'Liyee\\Product\\Components\\RssFeed' => 'plugins\\liyee\\product\\components\\RssFeed.php',
 );

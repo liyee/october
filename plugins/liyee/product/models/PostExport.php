@@ -1,4 +1,4 @@
-<?php namespace RainLab\Blog\Models;
+<?php namespace Liyee\Product\Models;
 
 use Backend\Models\ExportModel;
 use ApplicationException;
@@ -8,7 +8,7 @@ use ApplicationException;
  */
 class PostExport extends ExportModel
 {
-    public $table = 'rainlab_blog_posts';
+    public $table = 'liyee_product_posts';
 
     /**
      * @var array Relations
@@ -22,8 +22,8 @@ class PostExport extends ExportModel
 
     public $belongsToMany = [
         'post_categories' => [
-            'RainLab\Blog\Models\Category',
-            'table'    => 'rainlab_blog_posts_categories',
+            'Liyee\Product\Models\Category',
+            'table'    => 'liyee_product_posts_categories',
             'key'      => 'post_id',
             'otherKey' => 'category_id'
         ]
