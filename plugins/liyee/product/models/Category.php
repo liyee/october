@@ -14,7 +14,7 @@ class Category extends Model
     use \October\Rain\Database\Traits\NestedTree;
 
     public $table = 'liyee_product_categories';
-    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $implement = ['@Liyee.Translate.Behaviors.TranslatableModel'];
 
     /*
      * Validation

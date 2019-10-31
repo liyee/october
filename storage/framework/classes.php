@@ -106,4 +106,6 @@
   'Liyee\\Product\\Classes\\ComponentAbstract' => 'plugins\\liyee\\product\\classes\\ComponentAbstract.php',
   'Liyee\\Product\\Components\\Categories' => 'plugins\\liyee\\product\\components\\Categories.php',
   'Liyee\\Product\\Components\\RssFeed' => 'plugins\\liyee\\product\\components\\RssFeed.php',
+  'Liyee\\Product\\FormWidgets\\ProductMarkdown' => 'plugins\\liyee\\product\\formwidgets\\ProductMarkdown.php',
+  'Liyee\\Product\\Classes\\TagProcessor' => 'plugins\\liyee\\product\\classes\\TagProcessor.php',
 );

@@ -4,7 +4,7 @@ use BackendMenu;
 use Flash;
 use Lang;
 use Backend\Classes\Controller;
-use RainLab\Blog\Models\Post;
+use Liyee\Product\Models\Post;
 
 class Posts extends Controller
 {
@@ -41,7 +41,7 @@ class Posts extends Controller
         BackendMenu::setContextSideMenu('new_post');
 
         $this->bodyClass = 'compact-container';
-        $this->addCss('/plugins/liyee/product/assets/css/rainlab.blog-preview.css');
+        $this->addCss('/plugins/liyee/product/assets/css/liyee.product-preview.css');
         $this->addJs('/plugins/liyee/product/assets/js/post-form.js');
 
         return $this->asExtension('FormController')->create();
@@ -50,7 +50,7 @@ class Posts extends Controller
     public function update($recordId = null)
     {
         $this->bodyClass = 'compact-container';
-        $this->addCss('/plugins/liyee/product/assets/css/rainlab.blog-preview.css');
+        $this->addCss('/plugins/liyee/product/assets/css/liyee.product-preview.css');
         $this->addJs('/plugins/liyee/product/assets/js/post-form.js');
 
         return $this->asExtension('FormController')->update($recordId);
@@ -58,7 +58,7 @@ class Posts extends Controller
 
     public function export()
     {
-        $this->addCss('/plugins/liyee/product/assets/css/rainlab.blog-export.css');
+        $this->addCss('/plugins/liyee/product/assets/css/liyee.product-export.css');
 
         return $this->asExtension('ImportExportController')->export();
     }
@@ -84,7 +84,7 @@ class Posts extends Controller
         }
 
         if ($model instanceof Post && $model->isClassExtendedWith('RainLab.Translate.Behaviors.TranslatableModel')) {
-            $widget->secondaryTabs['fields']['content']['type'] = 'Liyee\Product\FormWidgets\MLBlogMarkdown';
+            $widget->secondaryTabs['fields']['content']['type'] = 'Liyee\Product\FormWidgets\MLProductMarkdown';
         }
     }
 

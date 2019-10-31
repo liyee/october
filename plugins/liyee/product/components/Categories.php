@@ -4,7 +4,7 @@ use Db;
 use Carbon\Carbon;
 use Cms\Classes\Page;
 use Liyee\Product\Classes\ComponentAbstract;
-use Liyee\Product\Models\Category as BlogCategory;
+use Liyee\Product\Models\Category as ProductCategory;
 
 class Categories extends ComponentAbstract
 {
@@ -26,8 +26,8 @@ class Categories extends ComponentAbstract
     public function componentDetails()
     {
         return [
-            'name'        => 'rainlab.blog::lang.settings.category_title',
-            'description' => 'rainlab.blog::lang.settings.category_description'
+            'name'        => 'liyee.product::lang.settings.category_title',
+            'description' => 'liyee.product::lang.settings.category_description'
         ];
     }
 
@@ -35,23 +35,23 @@ class Categories extends ComponentAbstract
     {
         return [
             'slug' => [
-                'title'       => 'rainlab.blog::lang.settings.category_slug',
-                'description' => 'rainlab.blog::lang.settings.category_slug_description',
+                'title'       => 'liyee.product::lang.settings.category_slug',
+                'description' => 'liyee.product::lang.settings.category_slug_description',
                 'default'     => '{{ :slug }}',
                 'type'        => 'string',
             ],
             'displayEmpty' => [
-                'title'       => 'rainlab.blog::lang.settings.category_display_empty',
-                'description' => 'rainlab.blog::lang.settings.category_display_empty_description',
+                'title'       => 'liyee.product::lang.settings.category_display_empty',
+                'description' => 'liyee.product::lang.settings.category_display_empty_description',
                 'type'        => 'checkbox',
                 'default'     => 0,
             ],
             'categoryPage' => [
-                'title'       => 'rainlab.blog::lang.settings.category_page',
-                'description' => 'rainlab.blog::lang.settings.category_page_description',
+                'title'       => 'liyee.product::lang.settings.category_page',
+                'description' => 'liyee.product::lang.settings.category_page_description',
                 'type'        => 'dropdown',
-                'default'     => 'blog/category',
-                'group'       => 'rainlab.blog::lang.settings.group_links',
+                'default'     => 'product/category',
+                'group'       => 'liyee.product::lang.settings.group_links',
             ],
         ];
     }
@@ -69,12 +69,12 @@ class Categories extends ComponentAbstract
     }
 
     /**
-     * Load all categories or, depending on the <displayEmpty> option, only those that have blog posts
+     * Load all categories or, depending on the <displayEmpty> option, only those that have product posts
      * @return mixed
      */
     protected function loadCategories()
     {
-        $categories = BlogCategory::with('posts_count')->getNested();
+        $categories = ProductCategory::with('posts_count')->getNested();
         if (!$this->property('displayEmpty')) {
             $iterator = function ($categories) use (&$iterator) {
                 return $categories->reject(function ($category) use (&$iterator) {
@@ -98,14 +98,14 @@ class Categories extends ComponentAbstract
 
     protected function linkCategories($categories)
     {
-        $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
+        $productPostsComponent = $this->getComponent('productPosts', $this->categoryPage);
 
-        return $categories->each(function ($category) use ($blogPostsComponent) {
+        return $categories->each(function ($category) use ($productPostsComponent) {
             $category->setUrl(
                 $this->categoryPage,
                 $this->controller,
                 [
-                    'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
+                    'slug' => $this->urlProperty($productPostsComponent, 'categoryFilter')
                 ]
             );
 

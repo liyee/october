@@ -4,7 +4,7 @@
 
 name: liyee.product::lang.product.create_category
 form: ~/plugins/liyee/product/models/category/fields.yaml
-modelClass: RainLab\Blog\Models\Category
+modelClass: Liyee\Product\Models\Category
 defaultRedirect: liyee/product/categories
 
 create:

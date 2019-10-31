@@ -3,9 +3,9 @@
 use Lang;
 use Response;
 use Cms\Classes\Page;
-use Liyee\Product\Models\Post as BlogPost;
+use Liyee\Product\Models\Post as ProductPost;
 use Liyee\Product\Classes\ComponentAbstract;
-use Liyee\Product\Models\Category as BlogCategory;
+use Liyee\Product\Models\Category as ProductCategory;
 
 class RssFeed extends ComponentAbstract
 {
@@ -80,7 +80,7 @@ class RssFeed extends ComponentAbstract
         ];
     }
 
-    public function getBlogPageOptions()
+    public function getProductPageOptions()
     {
         return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
@@ -92,7 +92,7 @@ class RssFeed extends ComponentAbstract
 
     public function getSortOrderOptions()
     {
-        $options = BlogPost::$allowedSortingOptions;
+        $options = ProductPost::$allowedSortingOptions;
 
         foreach ($options as $key => $value) {
             $options[$key] = Lang::get($value);
@@ -128,7 +128,7 @@ class RssFeed extends ComponentAbstract
         /*
          * List all the posts, eager load their categories
          */
-        $posts = BlogPost::with('categories')->listFrontEnd([
+        $posts = ProductPost::with('categories')->listFrontEnd([
             'sort'     => $this->property('sortOrder'),
             'perPage'  => $this->property('postsPerPage'),
             'category' => $category
@@ -154,7 +154,7 @@ class RssFeed extends ComponentAbstract
             return null;
         }
 
-        if (!$category = BlogCategory::whereSlug($categoryId)->first()) {
+        if (!$category = ProductCategory::whereSlug($categoryId)->first()) {
             return null;
         }
 

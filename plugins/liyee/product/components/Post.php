@@ -3,14 +3,14 @@
 use Event;
 use BackendAuth;
 use Cms\Classes\Page;
-use Liyee\Product\Models\Post as BlogPost;
+use Liyee\Product\Models\Post as ProductPost;
 use Liyee\Product\Classes\ComponentAbstract;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class Post extends ComponentAbstract
 {
     /**
-     * @var BlogPost The post model used for display.
+     * @var ProductPost The post model used for display.
      */
     public $post;
 
@@ -40,7 +40,7 @@ class Post extends ComponentAbstract
                 'title'       => 'liyee.product::lang.settings.post_category',
                 'description' => 'liyee.product::lang.settings.post_category_description',
                 'type'        => 'dropdown',
-                'default'     => 'blog/category',
+                'default'     => 'product/category',
             ],
         ];
     }
@@ -56,7 +56,7 @@ class Post extends ComponentAbstract
             $newParams = $params;
 
             foreach ($params as $paramName => $paramValue) {
-                $records = BlogPost::transWhere($paramName, $paramValue, $oldLocale)->first();
+                $records = ProductPost::transWhere($paramName, $paramValue, $oldLocale)->first();
 
                 if ($records) {
                     $records->translateContext($newLocale);
@@ -84,7 +84,7 @@ class Post extends ComponentAbstract
     {
         $slug = $this->property('slug');
 
-        $post = new BlogPost;
+        $post = new ProductPost;
 
         $post = $post->isClassExtendedWith('Liyee.Translate.Behaviors.TranslatableModel')
             ? $post->transWhere('slug', $slug)
@@ -105,11 +105,11 @@ class Post extends ComponentAbstract
          * Add a "url" helper attribute for linking to each category
          */
         if ($post && $post->categories->count()) {
-            $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
+            $productPostsComponent = $this->getComponent('productPosts', $this->categoryPage);
 
-            $post->categories->each(function ($category) use ($blogPostsComponent) {
+            $post->categories->each(function ($category) use ($productPostsComponent) {
                 $category->setUrl($this->categoryPage, $this->controller, [
-                    'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
+                    'slug' => $this->urlProperty($productPostsComponent, 'categoryFilter')
                 ]);
             });
         }
@@ -141,16 +141,16 @@ class Post extends ComponentAbstract
 
         $postPage = $this->getPage()->getBaseFileName();
 
-        $blogPostComponent = $this->getComponent('blogPost', $postPage);
-        $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
+        $productPostComponent = $this->getComponent('productPost', $postPage);
+        $productPostsComponent = $this->getComponent('productPosts', $this->categoryPage);
 
         $post->setUrl($postPage, $this->controller, [
-            'slug' => $this->urlProperty($blogPostComponent, 'slug')
+            'slug' => $this->urlProperty($productPostComponent, 'slug')
         ]);
 
-        $post->categories->each(function ($category) use ($blogPostsComponent) {
+        $post->categories->each(function ($category) use ($productPostsComponent) {
             $category->setUrl($this->categoryPage, $this->controller, [
-                'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
+                'slug' => $this->urlProperty($productPostsComponent, 'categoryFilter')
             ]);
         });
 

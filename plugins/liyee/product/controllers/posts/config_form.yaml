@@ -4,7 +4,7 @@
 
 name: liyee.product::lang.product.create_post
 form: ~/plugins/liyee/product/models/post/fields.yaml
-modelClass: RainLab\Blog\Models\Post
+modelClass: Liyee\Product\Models\Post
 defaultRedirect: liyee/product/posts
 
 create:
