@@ -32,6 +32,36 @@ class Plugin extends PluginBase
         ];
     }
     
+    public function registerPermissions()
+    {
+        return [
+            'liyee.product.manage_settings' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.manage_settings'
+            ],
+            'liyee.product.access_posts' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_posts'
+            ],
+            'liyee.product.access_categories' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_categories'
+            ],
+            'liyee.product.access_other_posts' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_other_posts'
+            ],
+            'liyee.product.access_import_export' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_import_export'
+            ],
+            'liyee.product.access_publish' => [
+                'tab'   => 'liyee.product::lang.product.tab',
+                'label' => 'liyee.product::lang.product.access_publish'
+            ]
+        ];
+    }
+    
     public function registerNavigation(){
         return [
             'product' => [
@@ -63,6 +93,43 @@ class Plugin extends PluginBase
                 ]
             ],
         ];
+    }
+    
+    public function registerSettings()
+    {
+        return [
+            'product' => [
+                'label' => 'liyee.product::lang.product.menu_label',
+                'description' => 'liyee.product::lang.product.settings_description',
+                'category' => 'liyee.product::lang.product.menu_label',
+                'icon' => 'icon-pencil',
+                'class' => 'Liyee\Product\Models\Settings',
+                'order' => 500,
+                'keywords' => 'product post category',
+                'permissions' => ['liyee.product.manage_settings']
+            ]
+        ];
+    }
+    
+    public function register()
+    {
+        /*
+         * Register the image tag processing callback
+         */
+        TagProcessor::instance()->registerCallback(function($input, $preview) {
+            if (!$preview) {
+                return $input;
+            }
+            
+            return preg_replace('|\<img src="image" alt="([0-9]+)"([^>]*)\/>|m',
+                '<span class="image-placeholder" data-index="$1">
+                    <span class="upload-dropzone">
+                        <span class="label">Click or drop an image...</span>
+                        <span class="indicator"></span>
+                    </span>
+                </span>',
+                $input);
+        });
     }
     
     public function boot()
@@ -97,36 +164,6 @@ class Plugin extends PluginBase
                 return Post::resolveMenuItem($item, $url, $theme);
             }
         });
-    }
-    
-    public function registerPermissions()
-    {
-        return [
-            'liyee.product.manage_settings' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.manage_settings'
-            ],
-            'liyee.product.access_posts' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.access_posts'
-            ],
-            'liyee.product.access_categories' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.access_categories'
-            ],
-            'liyee.product.access_other_posts' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.access_other_posts'
-            ],
-            'liyee.product.access_import_export' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.access_import_export'
-            ],
-            'liyee.product.access_publish' => [
-                'tab'   => 'liyee.product::lang.product.tab',
-                'label' => 'liyee.product::lang.product.access_publish'
-            ]
-        ];
     }
     
 }
