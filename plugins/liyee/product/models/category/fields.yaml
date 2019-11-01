@@ -14,6 +14,12 @@ fields:
         span: right
         placeholder: liyee.product::lang.category.slug_placeholder
         preset: name
+        
+    parent_id:
+	    label: liyee.product::lang.category.parent
+	    span: left
+	    placeholder: liyee.product::lang.category.parent_placeholder
+	    preset: name
 
     description:
         label: 'liyee.product::lang.category.description'
