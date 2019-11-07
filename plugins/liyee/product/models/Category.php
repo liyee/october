@@ -23,6 +23,7 @@ class Category extends Model
         'name' => 'required',
         'slug' => 'required|between:3,64|unique:liyee_product_categories',
         'code' => 'nullable|unique:liyee_product_categories',
+        'parent_id' => '',
     ];
 
     /**

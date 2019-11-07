@@ -16,12 +16,11 @@ fields:
         preset: name
 
     parent_id:
-        label: liyee.product::lang.category.parent
+        label: liyee.product::lang.category.parent_id
         span: left
-        placeholder: liyee.product::lang.category.parent_placeholder
-        preset: name
-        type: relation
-        select: name
+        placeholder: liyee.product::lang.category.parent_id_placeholder
+        type: number
+        
 
     description:
         label: 'liyee.product::lang.category.description'

@@ -85,8 +85,8 @@ return [
         'delete_success' => 'Successfully deleted those categories.',
         'return_to_categories' => 'Return to the product category list',
         'reorder' => 'Reorder Categories',
-        'parent' => 'Parent',
-        'parent_placeholder' => 'Parent category name'
+        'parent_id' => 'Parent',
+        'parent_id_placeholder' => 'Parent category name'
     ],
     'menuitem' => [
         'product_category' => 'Product category',
