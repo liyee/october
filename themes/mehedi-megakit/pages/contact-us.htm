@@ -4,13 +4,20 @@ layout = "cms-layout"
 is_hidden = 0
 
 [genericForm]
+group = "ContactUs"
 messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
+reset_form = 1
 inline_errors = "disabled"
+allowed_fields[] = "name"
+allowed_fields[] = "email"
+allowed_fields[] = "subject"
+allowed_fields[] = "message"
 sanitize_data = "disabled"
 anonymize_ip = "disabled"
+recaptcha_enabled = 0
 recaptcha_theme = "light"
-recaptcha_type = "image"
+recaptcha_type = "audio"
 recaptcha_size = "normal"
 ==
 <!-- Section Page Intro Start -->
