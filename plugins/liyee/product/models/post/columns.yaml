@@ -4,8 +4,13 @@
 
 columns:
 
+    number:
+        label: liyee.product::lang.post.number
+        searchable: true
+        sortable: true
+
     title:
-        label: liyee.product::lang.post.title
+        label: liyee.product::lang.post.name
         searchable: true
 
     # author:
@@ -13,6 +18,21 @@ columns:
     #   relation: user
     #   select: login
     #   searchable: true
+
+    fob_shanghai:
+        label: liyee.product::lang.post.fob_shanghai
+        searchable: true
+        sortable: true
+
+    unit:
+        label: liyee.product::lang.post.unit
+        searchable: true
+        sortable: true
+
+    moq:
+        label: liyee.product::lang.post.moq
+        searchable: true
+        sortable: true
 
     categories:
         label: liyee.product::lang.post.categories

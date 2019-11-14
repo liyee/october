@@ -5,7 +5,7 @@
 fields:
 
     title:
-        label: liyee.product::lang.post.title
+        label: Item Name
         span: left
         placeholder: liyee.product::lang.post.title_placeholder
 
@@ -41,7 +41,6 @@ secondaryTabs:
         published:
             tab: liyee.product::lang.post.tab_manage
             label: liyee.product::lang.post.published
-            span: left
             type: checkbox
 
         user:
@@ -63,6 +62,40 @@ secondaryTabs:
                 action: enable
                 field: published
                 condition: checked
+                
+        number:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.number
+            span: storm
+            cssClass: col-xs-3
+            required: true
+            placeholder: liyee.product::lang.post.number_placeholder
+            
+        fob_shanghai:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.fob_shanghai
+            span: storm
+            cssClass: col-xs-3
+            required: true
+            placeholder: liyee.product::lang.post.fob_shanghai_placeholder
+            
+        unit:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.unit
+            span: storm
+            cssClass: col-xs-3
+            required: true
+            placeholder: liyee.product::lang.post.unit_placeholder
+            
+        moq:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.moq
+            span: storm
+            cssClass: col-xs-3
+            type: number
+            min: 1
+            required: true
+            placeholder: liyee.product::lang.post.moq_placeholder
 
         excerpt:
             tab: liyee.product::lang.post.tab_manage

@@ -26,7 +26,7 @@ return [
         'settings_description' => 'Manage product settings',
         'show_all_posts_label' => 'Show all posts to backend users',
         'show_all_posts_comment' => 'Display both published and unpublished posts on the frontend to backend users',
-        'tab_general' => 'General'
+        'tab_general' => 'General',        
     ],
     'posts' => [
         'list_title' => 'Manage the product posts',
@@ -38,7 +38,7 @@ return [
         'import_post' => 'Import posts'
     ],
     'post' => [
-        'title' => 'Title',
+        'title' => 'Title',        
         'title_placeholder' => 'New post title',
         'content' => 'Content',
         'content_html' => 'HTML Content',
@@ -67,7 +67,16 @@ return [
         'delete_confirm' => 'Delete this post?',
         'delete_success' => 'Successfully deleted those posts.',
         'close_confirm' => 'The post is not saved.',
-        'return_to_posts' => 'Return to posts list'
+        'return_to_posts' => 'Return to posts list',
+        'name' => 'Item Name',
+        'number' => 'Item no.',
+        'fob_shanghai' => 'FOB Shanghai',
+        'unit' => 'Unit',
+        'moq' => 'MOQ',
+        'number_placeholder' => 'XXXX-X000',
+        'fob_shanghai_placeholder' => 'US$0.00',
+        'unit_placeholder' => 'PC',
+        'moq_placeholder' => '100',
     ],
     'categories' => [
         'list_title' => 'Manage the product categories',
