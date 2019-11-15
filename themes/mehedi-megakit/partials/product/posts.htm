@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+description = "Product Posts Overview"
 
-</body>
-</html>
+[viewBag]
+==
+{% set products = productPosts.posts %}
+<div class="row portfolio-gallery">
+{% for post in posts %}
+    <div class="col-lg-4 col-md-6">
+		<div class="portflio-item position-relative mb-4">
+			<a href="https://placehold.it/600x466" class="popup-gallery">
+				{% if post.featured_images.count > 0 %}
+	            <img src="{{ post.featured_images.first.getThumb(500, 'auto') }}" alt="" class="img-fluid w-100">
+	            {% else %}
+	            <img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
+	            {% endif %}
+				<i class="ti-plus overlay-item"></i>
+				<div class="portfolio-item-content">
+					<h3 class="mb-0 text-white">{{post.title}}</h3>
+					<p class="text-white-50">{{post.number}}</p>
+				</div>
+			</a>
+		</div>
+	</div>
+{% endfor %}
+</div>
+
+{% if posts.lastPage > 1 %}    
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}

@@ -109,14 +109,14 @@ class Posts extends ComponentAbstract
                 'title'       => 'liyee.product::lang.settings.posts_category',
                 'description' => 'liyee.product::lang.settings.posts_category_description',
                 'type'        => 'dropdown',
-                'default'     => 'Product/category',
+                'default'     => 'product/category',
                 'group'       => 'liyee.product::lang.settings.group_links',
             ],
             'postPage' => [
                 'title'       => 'liyee.product::lang.settings.posts_post',
                 'description' => 'liyee.product::lang.settings.posts_post_description',
                 'type'        => 'dropdown',
-                'default'     => 'Product/post',
+                'default'     => 'product/post',
                 'group'       => 'liyee.product::lang.settings.group_links',
             ],
             'exceptPost' => [

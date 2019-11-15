@@ -2,6 +2,19 @@ title = "Products"
 url = "/products"
 layout = "cms-layout"
 is_hidden = 0
+
+[productCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "product/category"
+
+[productPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 12
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "Product/category"
+postPage = "product/post"
 ==
 <!-- Section Page Ingro Start -->
 <section class="page-title bg-1">
@@ -35,92 +48,6 @@ is_hidden = 0
 		</div>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row portfolio-gallery">
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative  mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
-					<a href="https://placehold.it/600x466" class="popup-gallery">
-						<img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
-						
-						<i class="ti-plus overlay-item"></i>
-						<div class="portfolio-item-content">
-							<h3 class="mb-0 text-white">Project california</h3>
-							<p class="text-white-50">Web Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="container-fluid">{% partial 'product/posts' %}</div>
 </section>
 <!-- Section Portfolio End -->
