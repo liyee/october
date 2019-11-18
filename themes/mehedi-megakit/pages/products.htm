@@ -1,20 +1,20 @@
 title = "Products"
-url = "/products"
+url = "/products/:page?"
 layout = "cms-layout"
 is_hidden = 0
-
-[productCategories]
-slug = "{{ :slug }}"
-displayEmpty = 0
-categoryPage = "product/category"
 
 [productPosts]
 pageNumber = "{{ :page }}"
 postsPerPage = 12
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = "Product/category"
-postPage = "product/post"
+categoryPage = "products/category"
+postPage = "products/post"
+
+[productCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "products/category"
 ==
 <!-- Section Page Ingro Start -->
 <section class="page-title bg-1">
@@ -46,7 +46,7 @@ postPage = "product/post"
 				</div>
 			</div>
 		</div>
-		{% partial 'product/categories' %}
+		{% partial 'product/posts' %}
 	</div>
 </section>
 <!-- Section Portfolio End -->

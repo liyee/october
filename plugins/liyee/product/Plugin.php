@@ -8,7 +8,6 @@ use Liyee\Product\Classes\TagProcessor;
 use Liyee\Product\Models\Category;
 use Event;
 
-
 class Plugin extends PluginBase
 {
     

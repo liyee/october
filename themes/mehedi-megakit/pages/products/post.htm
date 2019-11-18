@@ -1,0 +1,29 @@
+;;
+title = "Product Post"
+url = "/product/post/:slug"
+layout = "product-singlepost-layout"
+description = "Viewing a single product post"
+is_hidden = 0
+
+[productPost]
+slug = "{{ :slug }}"
+categoryPage = "product/category"
+
+[productCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "product/category"
+==
+{##}
+<section class="section product-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% partial 'product/productPost' %}
+            </div>
+            <div class="col-md-4">
+                {% partial 'product/categories' %}
+            </div>
+        </div>
+    </div>
+</section>

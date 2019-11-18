@@ -1,0 +1,35 @@
+title = "Product Category"
+url = "/product/category/:slug"
+layout = "product-layout"
+description = "Viewing product posts in a specific category."
+meta_title = "The latest announcements from us"
+is_hidden = 0
+
+[productPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "product/category"
+postPage = "product/post"
+
+[productCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "product/category"
+==
+<?php
+function onStart()
+{
+    $this['bannerImage'] = $this->themeUrl('assets/images/product-banner.jpg');
+}
+?>
+==
+<section class="section product-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            {% partial 'product/posts' %}
+        </div>
+    </div>
+</section>
