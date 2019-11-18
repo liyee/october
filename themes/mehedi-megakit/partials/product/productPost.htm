@@ -2,22 +2,11 @@
 ==
 {##}
 <div class="col-lg-12 mb-5">
-	<div class="single-blog-item">
-        {% if post.featured_images.count %}
-        <div class="featured-images text-center">
-            {% for image in post.featured_images %}
-                <p>
-                    <img class="img-fluid rounded"
-                        data-src="{{ image.filename }}"
-                        src="{{ image.path }}"
-                        alt="{{ image.description }}"
-                        style="max-width: 100%" />
-                </p>
-            {% endfor %}
-        </div>
-        {% endif %}
+
+	<div class="single-blog-item">                
         <div class="blog-item-content bg-white p-5">
-            <div class="blog-item-meta bg-gray py-1 px-2 mb-3">
+        	<h5>{{ post.title}}</h5>
+            <div class="blog-item-meta bg-gray py-1 px-2 mb-3">            	
                 {% for category in post.categories %}
                 <span class="text-muted text-capitalize mr-3">
                     <a href="{{ category.url }}">{{ category.name }}</a>
@@ -27,5 +16,21 @@
             </div> 
             <div class="content">{{ post.content_html|raw }}</div>
         </div>
+        
+        <div class="row portfolio-gallery">
+        {% if post.featured_images.count %}
+        	{% for image in post.featured_images %}
+			<div class="col-lg-4 col-md-6">
+				<div class="portflio-item position-relative mb-4">
+					<a href="{{ image.path }}" class="popup-gallery">
+						<img src="{{ image.path }}" alt="" class="img-fluid w-100" data-src="{{ image.filename }}" alt="{{ image.description }}">
+						<i class="ti-plus overlay-item"></i>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		{% endif %}	
+		</div>   
+        
     </div>
 </div>
