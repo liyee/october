@@ -5,7 +5,7 @@
 
 	<div class="single-blog-item">                
         <div class="blog-item-content bg-white p-5">
-        	<h5>{{ post.title}}</h5>
+        	<h5>{{ post.title}}</h5>        	
             <div class="blog-item-meta bg-gray py-1 px-2 mb-3">            	
                 {% for category in post.categories %}
                 <span class="text-muted text-capitalize mr-3">
@@ -14,7 +14,10 @@
                 {% endfor %}
                 <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>
             </div> 
-            <div class="content">{{ post.content_html|raw }}</div>
+            <div class="content">
+            <img src="{{ post.featured_images.first.getThumb(500, 389) }}" alt="" class="img-fluid w-100">
+            {{ post.content_html|raw }}
+            </div>
         </div>
         
         <div class="row portfolio-gallery">
