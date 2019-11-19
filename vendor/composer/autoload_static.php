@@ -27,10 +27,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             'XdgBaseDir\\' => 11,
         ),
-        'W' => 
-        array (
-            'Wikimedia\\Composer\\' => 19,
-        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -72,7 +68,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'O' => 
         array (
             'October\\Rain\\' => 13,
-            'October\\Demo\\' => 13,
         ),
         'M' => 
         array (
@@ -124,10 +119,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'XdgBaseDir\\' => 
         array (
             0 => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src',
-        ),
-        'Wikimedia\\Composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src',
         ),
         'Twig\\' => 
         array (
@@ -236,10 +227,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'October\\Rain\\' => 
         array (
             0 => __DIR__ . '/..' . '/october/rain/src',
-        ),
-        'October\\Demo\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/plugins/october/demo',
         ),
         'Monolog\\' => 
         array (

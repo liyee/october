@@ -309,4 +309,25 @@ class Category extends Model
 
         return $url;
     }
+    
+    public function listCategory($fieldName, $value, $formData){
+        $category = self::getNested();
+        
+        $result = [];
+        $iterator = function($categories) use (&$iterator, &$result) {            
+            foreach ($categories as $category) {
+                $symbol = "|-".str_repeat('-', $category->nest_depth);
+                $result[$category->id] = $symbol.$category->name;
+                if ($category->children) {
+                    $iterator($category->children, $result);
+                }
+            }
+            
+            return $result;
+        };
+
+//         echo json_encode($category);die;
+
+        return $iterator($category);
+    }
 }
