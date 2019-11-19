@@ -18,12 +18,18 @@ categoryPage = "product/category"
 <section class="section product-wrap bg-gray">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 bg-white">
                 {% partial 'product/productPost' %}
             </div>
             <div class="col-md-4">
                 {% partial 'product/categories' %}
             </div>
-        </div>
-    </div>
+            <div class="col-md-12 bg-white mt-2">
+				{% partial 'product/speciality' %}
+		    </div>
+		    <div class="col-md-12 bg-white mt-2">
+				{% partial 'product/related' %}
+		    </div>
+    	</div>
+   	</div>
 </section>
