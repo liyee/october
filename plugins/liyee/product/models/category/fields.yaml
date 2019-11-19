@@ -26,6 +26,7 @@ fields:
         span: left
         type: dropdown
         options: listCategory
+        emptyOption: -- no select --
 
     description:
         label: 'liyee.product::lang.category.description'
