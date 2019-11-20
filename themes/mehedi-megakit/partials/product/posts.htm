@@ -9,9 +9,9 @@ description = "Product Posts Overview"
 		<div class="position-relative mb-4">
 		<a href="{{ post.url }}">
 			{% if post.featured_images.count > 0 %}
-            <img src="{{ post.featured_images.first.getThumb(500, 389) }}" alt="" class="img-fluid w-100 border">
+            <img src="{{ post.featured_images.first.getThumb(500, 500,'exact') }}" alt="" class="img-fluid w-100 border">
             {% else %}
-            <img src="https://placehold.it/500x389" alt="" class="img-fluid w-100">
+            <img src="https://placehold.it/500x500" alt="" class="img-fluid w-100">
             {% endif %}
 			<div class="portfolio-item-content">
 				<h3 class="mb-0 text-body">{{post.title}}</h3>
