@@ -313,7 +313,9 @@ class Category extends Model
     public function listCategory($fieldName, $value, $formData){
         $category = self::getNested();
         
-        $result = [];
+        $result = [
+            '0' => '-- no select --'
+        ];
         $iterator = function($categories) use (&$iterator, &$result) {            
             foreach ($categories as $category) {
                 $symbol = "|-".str_repeat('-', $category->nest_depth);
@@ -325,8 +327,6 @@ class Category extends Model
             
             return $result;
         };
-
-//         echo json_encode($category);die;
 
         return $iterator($category);
     }
