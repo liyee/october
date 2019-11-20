@@ -2,18 +2,12 @@
 ==
 {##}
 <div class="col-lg-12 pt-2">           
-   	<h5>{{ post.title}}</h5>        	
-    <div class="blog-item-meta bg-gray mb-2">            	
-        {% for category in post.categories %}
-        <span class="text-muted text-capitalize">
-            <a href="{{ category.url }}">{{ category.name }}</a>
-        </span>
-        {% endfor %}
-        <span class="text-black text-capitalize"><i class="ti-time"></i> {{ post.published_at|date('M d, Y') }}</span>
-    </div> 
+   	<h5 class="border-bottom pb-2">{{ post.title}}</h5>        	
     <div class="content">
-    <img src="{{ post.featured_images.first.getThumb(500, 389) }}" alt="" class="img-fluid w-100">
-    {{ post.content_html|raw }}
+	<div class="text-center">
+	  <img src="{{ post.featured_images.first.getThumb(560, 560) }}" alt="img-fluid w-100">
+	</div>
+		{{ post.content_html|raw }}
     </div>   
      <div class="row portfolio-gallery">
      {% if post.featured_images.count %}
