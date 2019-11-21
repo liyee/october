@@ -8,3 +8,7 @@ storage/framework/sessions/
 /storage/app/
 config/database.php
 config/cms.php
+config/database.php
+storage/app/uploads/public/5db/aaf/1b3/5dbaaf1b321b3683847746.jpg
+storage/app/uploads/public/5db/aaf/1b3/thumb_1_200_200_0_0_crop.jpg
+storage/framework/classes.php
