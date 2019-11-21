@@ -98,6 +98,8 @@
 	      time: 1000
 	  });
 
-	
+	$('#products').click(function(){
+		self.location='/products';
+	});
 
 })(jQuery);

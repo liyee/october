@@ -310,6 +310,15 @@ class Category extends Model
         return $url;
     }
     
+    /**
+     * 下拉框
+     * @author liyee
+     * 2019年11月21日 上午10:52:05
+     * @param unknown $fieldName
+     * @param unknown $value
+     * @param unknown $formData
+     * @return unknown
+     */
     public function listCategory($fieldName, $value, $formData){
         $category = self::getNested();
         

@@ -3,7 +3,6 @@ description = "Product Posts Overview"
 [viewBag]
 ==
 {% set products = productPosts.posts %}
-<div class="row portfolio-gallery">
 {% for post in posts %}
     <div class="col-lg-3 col-md-6">
 		<div class="position-relative mb-4">
@@ -13,15 +12,14 @@ description = "Product Posts Overview"
             {% else %}
             <img src="https://placehold.it/500x500" alt="" class="img-fluid w-100">
             {% endif %}
-			<div class="portfolio-item-content">
-				<h5 class="mb-0 text-body">{{post.title}}</h5>
-				<p class="text-body-50">{{post.number}}</p>
+			<div class="portfolio-item-content mt-2">
+				<h6 class="mb-0 text-body">{{post.title}}</h6>
+				<p class="text-body-50"><em>{{post.number}}</em></p>
 			</div>
 		</a>
 		</div>
 	</div>
 {% endfor %}
-</div>
 
 {% if posts.lastPage > 1 %}    
 <div class="row justify-content-center mt-5">

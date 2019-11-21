@@ -11,8 +11,8 @@ categoryFilter = "{{ :slug }}"
 postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = "product/category"
-postPage = "product/post"
+categoryPage = "products/category"
+postPage = "products/post"
 
 [productCategories]
 slug = "{{ :slug }}"
@@ -26,7 +26,7 @@ function onStart()
 }
 ?>
 ==
-<section class="section product-wrap bg-gray">
+<section class="section blog-wrap bg-gray">
     <div class="container">
         <div class="row">
             {% partial 'product/posts' %}
