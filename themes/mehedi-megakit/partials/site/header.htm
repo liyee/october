@@ -50,7 +50,7 @@ categoryPage = "products/category"
 			  	<div class="dropdown-menu" aria-labelledby="products" style="min-width: 750px; max-width: 750px;">
 			  	<dl class="row mb-n2">
 			  		{% for category in categories %}
-		                <dd class="col-sm-4">
+		                <dd class="col-sm-4 {% if loop.index%3 != 0%} border-right {% endif %}">
 			  				<a class="dropdown-item" href="{{ category.url }}">{{ category.name }}</a>
 			  			</dd>
 			  		{% endfor %}
