@@ -136,6 +136,7 @@
   'Backend\\FormWidgets\\DatePicker' => 'modules/backend/formwidgets/DatePicker.php',
   'Backend\\FormWidgets\\MarkdownEditor' => 'modules/backend/formwidgets/MarkdownEditor.php',
   'Liyee\\Product\\FormWidgets\\ProductMarkdown' => 'plugins/liyee/product/formwidgets/ProductMarkdown.php',
+<<<<<<< HEAD
   'Liyee\\Product\\Models\\Settings' => 'plugins/liyee/product/models/Settings.php',
   'Liyee\\Product\\Components\\Post' => 'plugins/liyee/product/components/Post.php',
   'Backend\\Traits\\InspectableContainer' => 'modules/backend/traits/InspectableContainer.php',
@@ -153,4 +154,13 @@
   'System\\Models\\PluginVersion' => 'modules/system/models/PluginVersion.php',
   'Backend\\Behaviors\\ReorderController' => 'modules/backend/behaviors/ReorderController.php',
   'System\\Classes\\ErrorHandler' => 'modules/system/classes/ErrorHandler.php',
+=======
+  'backend\\Controllers\\index' => 'modules\\backend\\controllers\\index.php',
+  'Liyee\\Product\\Models\\Settings' => 'plugins\\liyee\\product\\models\\Settings.php',
+  'system\\Controllers\\settings' => 'modules\\system\\controllers\\settings.php',
+  'system\\Controllers\\requestlogs' => 'modules\\system\\controllers\\requestlogs.php',
+  'cms\\Controllers\\themelogs' => 'modules\\cms\\controllers\\themelogs.php',
+  'system\\Controllers\\eventlogs' => 'modules\\system\\controllers\\eventlogs.php',
+  'RainLab\\Blog\\Models\\Settings' => 'plugins\\rainlab\\blog\\models\\Settings.php',
+>>>>>>> 1e01fddc788e467c089a4a512b22cca5e9a70402
 );
