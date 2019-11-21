@@ -136,4 +136,11 @@
   'Backend\\FormWidgets\\DatePicker' => 'modules/backend/formwidgets/DatePicker.php',
   'Backend\\FormWidgets\\MarkdownEditor' => 'modules/backend/formwidgets/MarkdownEditor.php',
   'Liyee\\Product\\FormWidgets\\ProductMarkdown' => 'plugins/liyee/product/formwidgets/ProductMarkdown.php',
+  'backend\\Controllers\\index' => 'modules\\backend\\controllers\\index.php',
+  'Liyee\\Product\\Models\\Settings' => 'plugins\\liyee\\product\\models\\Settings.php',
+  'system\\Controllers\\settings' => 'modules\\system\\controllers\\settings.php',
+  'system\\Controllers\\requestlogs' => 'modules\\system\\controllers\\requestlogs.php',
+  'cms\\Controllers\\themelogs' => 'modules\\cms\\controllers\\themelogs.php',
+  'system\\Controllers\\eventlogs' => 'modules\\system\\controllers\\eventlogs.php',
+  'RainLab\\Blog\\Models\\Settings' => 'plugins\\rainlab\\blog\\models\\Settings.php',
 );
