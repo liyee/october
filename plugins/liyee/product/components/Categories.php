@@ -66,6 +66,7 @@ class Categories extends ComponentAbstract
         $this->currentCategorySlug = $this->page['currentCategorySlug'] = $this->property('slug');
         $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
         $this->categories = $this->page['categories'] = $this->loadCategories();
+//         echo json_encode($this->categories);die;
     }
 
     /**

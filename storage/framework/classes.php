@@ -109,4 +109,5 @@
   'Liyee\\Product\\FormWidgets\\ProductMarkdown' => 'plugins\\liyee\\product\\formwidgets\\ProductMarkdown.php',
   'Liyee\\Product\\Classes\\TagProcessor' => 'plugins\\liyee\\product\\classes\\TagProcessor.php',
   'Liyee\\Product\\Models\\Settings' => 'plugins\\liyee\\product\\models\\Settings.php',
+  'October\\Demo\\Components\\Todo' => 'plugins\\october\\demo\\components\\Todo.php',
 );

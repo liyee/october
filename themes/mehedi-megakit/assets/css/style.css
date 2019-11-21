@@ -485,7 +485,7 @@ a:focus {
 
 .dropdown-item {
   padding: .8rem 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 14px;
 }
 
