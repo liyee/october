@@ -14,13 +14,13 @@ categoryPage = "products/category"
 	<div class="header-top ">
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
-				<div class="col-lg-4 col-md-2">
+				<div class="col-lg-5 col-md-2">
 					<a class="navbar-brand ml-3" href="{{ 'home'|page }}">
 				  	Mega<span>kit.</span>
 				  	</a>
 			  	</div>
-				<div class="col-lg-3 col-md-4">
-					<div class="header-top-socials text-left text-lg-left text-md-left">
+				<div class="col-lg-2 col-md-4">
+					<div class="header-top-socials text-center text-lg-right text-md-right">
 						<a href="https://www.facebook.com/themefisher" target="_blank"><i class="ti-facebook"></i></a>
 						<a href="https://twitter.com/themefisher" target="_blank"><i class="ti-twitter"></i></a>
 						<a href="https://github.com/themefisher/" target="_blank"><i class="ti-github"></i></a>
@@ -37,6 +37,9 @@ categoryPage = "products/category"
 	</div>
 	<nav class="navbar navbar-expand-lg  py-4" id="navbar">
 		<div class="container">
+		 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		  </button>
 		  <div class="collapse navbar-collapse text-left pl-n2" id="navbarsExample09">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item active">
@@ -44,7 +47,7 @@ categoryPage = "products/category"
 			  </li>			  
 			  <li class="nav-item dropdown">
 			  	<a class="nav-link dropdown-toggle" id="products" href="{{ 'products'|page }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-			  	<div class="dropdown-menu" aria-labelledby="products" style="min-width: 750px; max-width: 750px;">
+			  	<div class="dropdown-menu col-lg-12 col-md-12" aria-labelledby="products" style="min-width: 750px; max-width: 750px;">
 			  	<dl class="row mb-n2">
 			  		{% for category in categories %}
 		                <dd class="col-sm-4 {% if loop.index%3 != 0%} border-right {% endif %}">
