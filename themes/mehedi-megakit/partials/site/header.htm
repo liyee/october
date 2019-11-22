@@ -6,6 +6,13 @@ description = "Header with TopBar and Navigation"
 slug = "{{ :slug }}"
 displayEmpty = 1
 categoryPage = "products/category"
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+
+[siteSearchInclude]
 ==
 {##}
 {# Header Start #}
@@ -67,10 +74,15 @@ categoryPage = "products/category"
 			  <li class="nav-item"><a class="nav-link" href="{{ 'services'|page }}">Services</a></li>
 			  <li class="nav-item"><a class="nav-link" href="{{ 'blog'|page }}">Blog</a></li>
 			  <li class="nav-item"><a class="nav-link" href="{{ 'contact-us'|page }}">Contact</a></li>
-			</ul>
-
-			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-			  <a href="{{ 'contact-us'|page }}" class="btn btn-solid-border btn-round-full">Get a Quote</a>
+			</ul>			
+					    
+			<form action="{{ 'products/search'|page }}" method="get">
+				<div class="input-group input-group-sm mb-n1 rounded-pill bg-white">
+					<input class="form-control form-control-sm ml-3" name="q" type="text" placeholder="Find product" autocomplete="off">
+					<div class="input-group-append mr-3">
+						<button class="input-group-text" type="submit">Go</button>
+				    </div>
+				</div>
 			</form>
 		  </div>
 		</div>

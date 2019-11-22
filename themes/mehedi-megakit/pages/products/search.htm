@@ -1,0 +1,29 @@
+title = "Search Results"
+url = "/product/search"
+layout = "product-layout"
+description = "Viewing product posts in a specific category."
+meta_title = "The latest announcements from us"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<?php
+function onStart(){
+    $query = Request::get('q');
+    $query = str_replace('ё', 'e', $query);
+    $this->page->components['searchResults']->forceQuery($query);
+}
+?>
+==
+<section class="section blog-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+        	<h2>Search results for {{ searchResults.query }}</h2>
+            {% component 'searchResults' %}
+        </div>
+    </div>
+</section>
