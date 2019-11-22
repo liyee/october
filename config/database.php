@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => '10.8.189.203',
+            'host'      => '127.0.0.1',
             'port'      => 3306,
             'database'  => 'october',
-            'username'  => 'dbmanger',
-            'password'  => 'edJelrZuAgpNeLyn',
+            'username'  => 'web_mutantbox_qa',
+            'password'  => 'FSwFFUAVnP4XXIKW',
             'charset'   => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix'    => '',
