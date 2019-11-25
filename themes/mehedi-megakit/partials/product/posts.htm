@@ -3,6 +3,7 @@ description = "Product Posts Overview"
 [viewBag]
 ==
 {% set products = productPosts.posts %}
+<div class="row">
 {% for post in posts %}
     <div class="col-lg-3 col-md-6">
 		<div class="position-relative mb-4">
@@ -20,6 +21,7 @@ description = "Product Posts Overview"
 		</div>
 	</div>
 {% endfor %}
+</div>
 
 {% if posts.lastPage > 1 %}    
 <div class="row justify-content-center mt-5">

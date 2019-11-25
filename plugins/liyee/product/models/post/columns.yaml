@@ -39,7 +39,7 @@ columns:
         relation: categories
         select: name
         searchable: true
-        sortable: false
+        sortable: true
 
     created_at:
         label: liyee.product::lang.post.created
