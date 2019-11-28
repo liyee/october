@@ -96,6 +96,18 @@ secondaryTabs:
             min: 1
             required: true
             placeholder: liyee.product::lang.post.moq_placeholder
+            
+        sorted:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.sorted
+            span: storm
+            cssClass: col-xs-3
+            type: number
+            min: 1
+            max: 9999
+            default: 1
+            required: true
+            placeholder: liyee.product::lang.post.sorted_placeholder
 
         excerpt:
             tab: liyee.product::lang.post.tab_manage

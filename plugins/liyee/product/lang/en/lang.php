@@ -77,6 +77,8 @@ return [
         'fob_shanghai_placeholder' => 'US$0.00',
         'unit_placeholder' => 'PC',
         'moq_placeholder' => '100',
+        'sorted' => 'Sort',
+        'sorted_placeholder' => '1'
     ],
     'categories' => [
         'list_title' => 'Manage the product categories',
@@ -158,6 +160,8 @@ return [
         'updated_desc' => 'Updated (descending)',
         'published_asc' => 'Published (ascending)',
         'published_desc' => 'Published (descending)',
+        'sorted_asc' => 'Sort (ascending)',
+        'sorted_desc' => 'Sort (descending)',
         'random' => 'Random'
     ],
     'import' => [
