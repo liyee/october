@@ -118,6 +118,7 @@ class LiyeeProductResultsProvider extends ResultsProvider
         return $this->defaultModelQuery()
                     ->where(function ($query) {
                         $query->where('title', 'like', "%{$this->query}%")
+                              ->where('number', 'like', "%{$this->query}%")
                               ->orWhere('content', 'like', "%{$this->query}%")
                               ->orWhere('excerpt', 'like', "%{$this->query}%");
                     })
