@@ -52,13 +52,25 @@ return [
             'prefix'   => '',
         ],
 
+//         'mysql' => [
+//             'driver'    => 'mysql',
+//             'host'      => '127.0.0.1',
+//             'port'      => 3306,
+//             'database'  => 'october',
+//             'username'  => 'web_mutantbox_qa',
+//             'password'  => 'FSwFFUAVnP4XXIKW',
+//             'charset'   => 'utf8mb4',
+//             'collation' => 'utf8mb4_unicode_ci',
+//             'prefix'    => '',
+//         ],
+        
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
+            'host'      => '10.8.189.203',
             'port'      => 3306,
             'database'  => 'october',
-            'username'  => 'web_mutantbox_qa',
-            'password'  => 'FSwFFUAVnP4XXIKW',
+            'username'  => 'dbmanger',
+            'password'  => 'edJelrZuAgpNeLyn',
             'charset'   => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix'    => '',
