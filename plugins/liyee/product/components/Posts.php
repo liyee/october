@@ -240,9 +240,15 @@ class Posts extends ComponentAbstract
                     ]
                     );
             });
+			
+			if(isset($post->categories) && count($post->categories)>1){
+				$post->category_id = current($post->categories)['id'];
+			}else{
+				$post->category_id = 0;
+			}
         });
             
-            return $posts;
+        return $posts;
     }
     
     protected function loadCategory()
