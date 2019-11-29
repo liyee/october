@@ -49,6 +49,11 @@ class Category extends Model
             'count' => true
         ]
     ];
+    
+    public $attachMany = [
+        'featured_images' => ['System\Models\File', 'order' => 'sort_order'],
+        'content_images'  => ['System\Models\File']
+    ];
 
     public function beforeValidate()
     {
