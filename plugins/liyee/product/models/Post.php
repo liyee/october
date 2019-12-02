@@ -73,8 +73,8 @@ class Post extends Model
         'updated_at desc'         => 'liyee.product::lang.sorting.updated_desc',
         'published_at asc'        => 'liyee.product::lang.sorting.published_asc',
         'published_at desc'       => 'liyee.product::lang.sorting.published_desc',
-        'category_id,sorted asc'  => 'liyee.product::lang.sorting.sorted_asc',
-        'category_id,sorted desc' => 'liyee.product::lang.sorting.sorted_desc',
+        'sorted asc'  => 'liyee.product::lang.sorting.sorted_asc',
+        'sorted desc' => 'liyee.product::lang.sorting.sorted_desc',
         'random'                  => 'liyee.product::lang.sorting.random'
     ];
 

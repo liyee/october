@@ -21,15 +21,6 @@ fields:
         type: dropdown
         options: listCategory
 
-    sorted:
-        label: liyee.product::lang.category.sorted
-        span: right
-        type: number
-        min: 1
-        max: 9999
-        default: 1
-        placeholder: liyee.product::lang.category.sorted_placeholder
-
     description:
         label: 'liyee.product::lang.category.description'
         size: large

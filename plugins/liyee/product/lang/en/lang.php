@@ -98,8 +98,6 @@ return [
         'reorder' => 'Reorder Categories',
         'parent_id' => 'Parent',
         'parent_id_placeholder' => 'Parent category name',
-        'sorted' => 'Sort',
-        'sorted_placeholder' => '1',
         'featured_images' => 'Featured Images',
     ],
     'menuitem' => [
