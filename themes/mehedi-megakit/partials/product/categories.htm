@@ -6,21 +6,21 @@
 
 <div class="row">
 	{% for category in categories %}
-	{% set postCount = category.post_count %}
 	<dl class="col-sm-4">
-		<dt class="border-bottom">
+		<dt class="border-bottom border-danger mb-2" style="border-bottom-style:dashed !important;">
 			<a href="{{ category.url }}" >
 	        	{{ category.name }}
-	            {% if postCount %}
-	                <span class="badge">{{ postCount }}</span>
-	            {% endif %}
 	        </a>
 		</dt>
 		{% set children=category.children %}
 		{% for child in children %}
+		{% set postCount = child.post_count %}
 		<dd>
 			<a href="{{ child.url }}" >
 				{{child.name}}
+				{% if postCount %}
+	                <span class="badge">{{ postCount }}</span>
+	            {% endif %}
 			</a>
 		</dd>
 		{% endfor %}		
