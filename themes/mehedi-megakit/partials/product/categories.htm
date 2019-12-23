@@ -4,14 +4,26 @@
 {% set categories = productCategories.categories %}
 {% set currentCategorySlug = productCategories.currentCategorySlug %}
 
-<div class="list-group">
-    {% for category in categories %}
-        {% set postCount = category.post_count %}
-        <a href="{{ category.url }}" class="list-group-item {{ category.slug == currentCategorySlug ? 'active' }}" >
-        	{{ category.name }}
-            {% if postCount %}
-                <span class="badge">{{ postCount }}</span>
-            {% endif %}
-        </a> 
-    {% endfor %}
+<div class="row">
+	{% for category in categories %}
+	{% set postCount = category.post_count %}
+	<dl class="col-sm-4">
+		<dt class="border-bottom">
+			<a href="{{ category.url }}" >
+	        	{{ category.name }}
+	            {% if postCount %}
+	                <span class="badge">{{ postCount }}</span>
+	            {% endif %}
+	        </a>
+		</dt>
+		{% set children=category.children %}
+		{% for child in children %}
+		<dd>
+			<a href="{{ child.url }}" >
+				{{child.name}}
+			</a>
+		</dd>
+		{% endfor %}		
+	</dl>
+	{% endfor %}
 </div>
