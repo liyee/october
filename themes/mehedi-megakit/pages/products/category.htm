@@ -26,8 +26,15 @@ function onStart()
 }
 ?>
 ==
-<section class="section blog-wrap bg-gray">
-    <div class="container">        
+<section class="section blog-wrap bg-gray pt-3">
+    <div class="container">	
+    <nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/">Home</a></li>
+		    <li class="breadcrumb-item active" aria-current="page"><a href="/products">Products</a></li>
+		    <li class="breadcrumb-item active" aria-current="page"><a href="{{ category.url }}">{{ category.name }}</a></li>
+		  </ol>
+		</nav>	   
 		{% partial 'product/posts' %}
     </div>
 </section>
