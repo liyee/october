@@ -54,15 +54,13 @@ showProviderBadge = 1
 			  </li>			  
 			  <li class="nav-item dropdown">
 			  	<a class="nav-link dropdown-toggle" id="products" href="{{ 'products'|page }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-			  	<div class="dropdown-menu col-lg-12 col-md-12" aria-labelledby="products" style="min-width: 750px; max-width: 750px;">
-			  	<dl class="row mb-n2">
-			  		{% for category in categories %}
-		                <dd class="col-sm-4 {% if loop.index%3 != 0%} border-right {% endif %}">
-			  				<a class="dropdown-item" href="{{ category.url }}">{{ category.name }}</a>
-			  			</dd>
-			  		{% endfor %}
-				</dl>
-			  	</div>
+			  	<div class="dropdown-menu span12 show" aria-labelledby="products" style="width:789px">
+					<div class="row">
+					{% for category in categories %}
+						<div class="col-lg-4 {%if loop.index%3==1%}border-right pr-0{% elseif loop.index%3==2 %}border-right px-0{% else %}pl-0{% endif %}"><a class="dropdown-item" href="{{ category.url }}">{{ category.name }}</a></div>
+					{% endfor %}										
+					</div>
+				</div>
 			  </li>
 			  <li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
