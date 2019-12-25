@@ -71,6 +71,7 @@ class Post extends ComponentAbstract
     {
         $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
         $this->post = $this->page['post'] = $this->loadPost();
+//         echo json_encode($this->post);die;
     }
 
     public function onRender()
