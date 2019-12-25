@@ -28,7 +28,7 @@
 		{% for child2 in children2 %}
 		{% set postCount2 = child2.post_count %}
 			<dd>
-			&nbsp;&nbsp;<a href="{{ child.url }}" >
+			&nbsp;&nbsp;<a href="{{ child2.url }}" >
 				{{child2.name}}
 				{% if postCount2 %}
 	                <span class="badge">{{ postCount2 }}</span>
