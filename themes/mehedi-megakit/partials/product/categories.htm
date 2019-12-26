@@ -12,6 +12,17 @@
                 {{ category.name }}
             </a>
         </dt>
+        <dd>
+            <a href="{{ category.url }}" >
+                {% if category.featured_images.count > 0 %}
+                    <img src="{{ category.featured_images.first.getThumb(320, 320,'exact') }}" alt="" class="img-fluid w-100 border">
+                {% else %}
+                    <img src="https://placehold.it/320x320" alt="" class="img-fluid w-100">
+                {% endif %}
+            </a>
+        </dd>
+        
+        <!-- 
         {% set children=category.children %}
         {% for child in children %}
         {% set postCount = child.post_count %}
@@ -36,9 +47,9 @@
                 {% endif %}
             </a>
         </dd>
+        {% endfor %}        
         {% endfor %}
-        
-        {% endfor %}
+         -->
     </dl>
     {% endfor %}
 </div>
