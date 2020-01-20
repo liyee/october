@@ -122,3 +122,9 @@ secondaryTabs:
             mode: image
             imageWidth: 200
             imageHeight: 200
+            
+        products_recommend:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.products_recommend
+            type: partial
+            path: $/liyee/product/models/comments/_content_field.htm

@@ -90,7 +90,12 @@ class Post extends Model
             'Liyee\Product\Models\Category',
             'table' => 'liyee_product_posts_categories',
             'order' => 'name'
-        ]
+        ],
+        'recommend' => [
+            'Liyee\Product\Models\Post',
+            'table' => 'liyee_product_posts_recommend',
+            'order' => 'id'
+        ],
     ];
 
     public $attachMany = [

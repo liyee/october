@@ -63,7 +63,7 @@ return [
         'published_on' => 'Published on',
         'excerpt' => 'Excerpt',
         'summary' => 'Summary',
-        'featured_images' => 'Featured Images',
+        'featured_images' => 'Featured Images',        
         'delete_confirm' => 'Delete this post?',
         'delete_success' => 'Successfully deleted those posts.',
         'close_confirm' => 'The post is not saved.',
@@ -78,7 +78,8 @@ return [
         'unit_placeholder' => 'PC',
         'moq_placeholder' => '100',
         'sorted' => 'Sort',
-        'sorted_placeholder' => '1'
+        'sorted_placeholder' => '1',
+        'products_recommend' => 'Products Recommend',
     ],
     'categories' => [
         'list_title' => 'Manage the product categories',
