@@ -30,7 +30,7 @@ return [
     |--------------------------------------------------------------------------
     | Back-end URI prefix
     |--------------------------------------------------------------------------
-    |
+    |enableCsrfProtection
     | Specifies the URL name used for accessing back-end pages.
     | For example: backend -> http://localhost/backend
     |
