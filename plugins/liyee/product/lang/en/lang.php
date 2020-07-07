@@ -26,7 +26,8 @@ return [
         'settings_description' => 'Manage product settings',
         'show_all_posts_label' => 'Show all posts to backend users',
         'show_all_posts_comment' => 'Display both published and unpublished posts on the frontend to backend users',
-        'tab_general' => 'General',        
+        'tab_general' => 'General',
+        'tab_general' => 'General',
     ],
     'posts' => [
         'list_title' => 'Manage the product posts',
@@ -80,6 +81,7 @@ return [
         'sorted' => 'Sort',
         'sorted_placeholder' => '1',
         'products_recommend' => 'Products Recommend',
+        'position' => 'Position',
     ],
     'categories' => [
         'list_title' => 'Manage the product categories',

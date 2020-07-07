@@ -109,6 +109,13 @@ secondaryTabs:
             required: true
             placeholder: liyee.product::lang.post.sorted_placeholder
 
+        position:
+            tab: liyee.product::lang.post.tab_manage
+            label: liyee.product::lang.post.position
+            span: storm
+            cssClass: col-xs-3
+            type: dropdown
+
         excerpt:
             tab: liyee.product::lang.post.tab_manage
             label: liyee.product::lang.post.excerpt
