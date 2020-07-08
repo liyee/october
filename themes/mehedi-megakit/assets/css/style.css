@@ -1417,4 +1417,11 @@ h3.quote::before {
   }
 }
 
+.position{
+  padding-top: 20px!important ;
+}
+.position .title{
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
