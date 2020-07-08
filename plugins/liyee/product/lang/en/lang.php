@@ -26,7 +26,8 @@ return [
         'settings_description' => 'Manage product settings',
         'show_all_posts_label' => 'Show all posts to backend users',
         'show_all_posts_comment' => 'Display both published and unpublished posts on the frontend to backend users',
-        'tab_general' => 'General',        
+        'tab_general' => 'General',
+        'tab_general' => 'General',
     ],
     'posts' => [
         'list_title' => 'Manage the product posts',
@@ -80,6 +81,7 @@ return [
         'sorted' => 'Sort',
         'sorted_placeholder' => '1',
         'products_recommend' => 'Products Recommend',
+        'position' => 'Position',
     ],
     'categories' => [
         'list_title' => 'Manage the product categories',
@@ -151,7 +153,9 @@ return [
         'rssfeed_title' => 'RSS Feed',
         'rssfeed_description' => 'Generates an RSS feed containing posts from the product.',
         'group_links' => 'Links',
-        'group_exceptions' => 'Exceptions'
+        'group_exceptions' => 'Exceptions',
+        'position' => 'Position',
+        'position_description' => 'Set recommended items',
     ],
     'sorting' => [
         'title_asc' => 'Title (ascending)',

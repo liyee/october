@@ -5,11 +5,21 @@ description = "Main Page. Made with CMS-Layout."
 meta_title = "selead safety"
 meta_description = "selead safety,business,company"
 is_hidden = 0
+
+[productPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+position = 1
+categoryPage = "about"
+postPage = "about"
 ==
 {% partial 'home/slider' %}
-<!--{% partial 'home/intro' %}-->
-<!--{% partial 'home/about' %}-->
-<!--{% partial 'home/counter' %}-->
-<!--{% partial 'home/services' %}-->
+{% partial 'product/position' %}
+<!--{% partial 'home/intro' %}
+{% partial 'home/about' %}
+{% partial 'home/counter' %}
+{% partial 'home/services' %}
 {% partial 'home/cta' %}
-{% partial 'home/contacthome' %}
+{% partial 'home/contacthome' %}-->

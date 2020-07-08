@@ -73,8 +73,8 @@ class Post extends Model
         'updated_at desc'         => 'liyee.product::lang.sorting.updated_desc',
         'published_at asc'        => 'liyee.product::lang.sorting.published_asc',
         'published_at desc'       => 'liyee.product::lang.sorting.published_desc',
-        'sorted asc'  => 'liyee.product::lang.sorting.sorted_asc',
-        'sorted desc' => 'liyee.product::lang.sorting.sorted_desc',
+        'sorted asc'              => 'liyee.product::lang.sorting.sorted_asc',
+        'sorted desc'             => 'liyee.product::lang.sorting.sorted_desc',
         'random'                  => 'liyee.product::lang.sorting.random'
     ];
 
@@ -241,10 +241,15 @@ class Post extends Model
             'category'         => null,
             'search'           => '',
             'published'        => true,
-            'exceptPost'       => null
+            'exceptPost'       => null,
+            'position'         => 0,
         ], $options));
 
         $searchableFields = ['title', 'slug', 'excerpt', 'content'];
+
+        if ($position){
+            $query->where('position', $position);
+        }
 
         if ($published) {
             $query->isPublished();
@@ -688,5 +693,12 @@ class Post extends Model
         $url = CmsPage::url($page->getBaseFileName(), $params);
 
         return $url;
+    }
+
+    public function getPositionOptions($value, $formData){
+        return [
+            '0' => 'default',//默认
+            '1' => 'home',//首页推荐
+        ];
     }
 }
