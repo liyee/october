@@ -105,6 +105,13 @@ class Posts extends ComponentAbstract
                 'type'        => 'dropdown',
                 'default'     => 'published_at desc',
             ],
+            'position' => [
+                'title'       => 'liyee.product::lang.settings.position',
+                'description' => 'liyee.product::lang.settings.position_description',
+                'type'        => 'dropdown',
+                'default'     => '0',
+                'options'     => ['0'=>'default', '1'=>'home']
+            ],
             'categoryPage' => [
                 'title'       => 'liyee.product::lang.settings.posts_category',
                 'description' => 'liyee.product::lang.settings.posts_category_description',
@@ -208,6 +215,7 @@ class Posts extends ComponentAbstract
             'search'           => trim(input('search')),
             'category'         => $category,
             'published'        => $isPublished,
+            'position'         => $this->property('position'),
             'exceptPost'       => is_array($this->property('exceptPost'))
             ? $this->property('exceptPost')
             : preg_split('/,\s*/', $this->property('exceptPost'), -1, PREG_SPLIT_NO_EMPTY),

@@ -241,10 +241,15 @@ class Post extends Model
             'category'         => null,
             'search'           => '',
             'published'        => true,
-            'exceptPost'       => null
+            'exceptPost'       => null,
+            'position'         => 0,
         ], $options));
 
         $searchableFields = ['title', 'slug', 'excerpt', 'content'];
+
+        if ($position){
+            $query->where('position', $position);
+        }
 
         if ($published) {
             $query->isPublished();

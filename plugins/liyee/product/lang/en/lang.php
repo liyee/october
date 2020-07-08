@@ -153,7 +153,9 @@ return [
         'rssfeed_title' => 'RSS Feed',
         'rssfeed_description' => 'Generates an RSS feed containing posts from the product.',
         'group_links' => 'Links',
-        'group_exceptions' => 'Exceptions'
+        'group_exceptions' => 'Exceptions',
+        'position' => 'Position',
+        'position_description' => 'Set recommended items',
     ],
     'sorting' => [
         'title_asc' => 'Title (ascending)',
