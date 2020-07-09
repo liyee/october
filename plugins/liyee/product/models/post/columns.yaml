@@ -34,6 +34,11 @@ columns:
         searchable: true
         sortable: true
 
+    position:
+        label: liyee.product::lang.post.position
+        type: partial
+        path: ~/plugins/liyee/product/models/comments/_content_field.htm
+
     categories:
         label: liyee.product::lang.post.categories
         relation: categories
