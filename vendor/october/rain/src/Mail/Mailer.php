@@ -315,10 +315,10 @@ class Mailer extends MailerBase
 
     /**
      * Process a recipients object, which can look like the following:
-     *  - (string) admin@domain.tld
-     *  - (object) ['email' => 'admin@domain.tld', 'name' => 'Adam Person']
-     *  - (array) ['admin@domain.tld' => 'Adam Person', ...]
-     *  - (array) [ (object|array) ['email' => 'admin@domain.tld', 'name' => 'Adam Person'], [...] ]
+     *  - (string) 850030278@qq.com
+     *  - (object) ['email' => '850030278@qq.com', 'name' => 'Adam Person']
+     *  - (array) ['850030278@qq.com' => 'Adam Person', ...]
+     *  - (array) [ (object|array) ['email' => '850030278@qq.com', 'name' => 'Adam Person'], [...] ]
      * @param mixed $recipients
      * @return array
      */

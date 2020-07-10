@@ -56,7 +56,7 @@ class MailSetting extends Model
         $config = App::make('config');
         $this->send_mode = $config->get('mail.driver', static::MODE_MAIL);
         $this->sender_name = $config->get('mail.from.name', 'Your Site');
-        $this->sender_email = $config->get('mail.from.address', 'admin@domain.tld');
+        $this->sender_email = $config->get('mail.from.address', '850030278@qq.com');
         $this->sendmail_path = $config->get('mail.sendmail', '/usr/sbin/sendmail');
         $this->smtp_address = $config->get('mail.host');
         $this->smtp_port = $config->get('mail.port', 587);
