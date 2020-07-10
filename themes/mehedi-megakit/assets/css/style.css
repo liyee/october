@@ -1418,10 +1418,15 @@ h3.quote::before {
 }
 
 .position{
-  padding-top: 20px!important ;
+  padding-top: 10px!important;
+  padding-bottom: 0px!important;
+}
+
+.intro{
+  padding-top: 5px!important ;
 }
 .position .title{
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

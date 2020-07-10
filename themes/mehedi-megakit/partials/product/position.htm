@@ -3,20 +3,24 @@ description = "Recommended item Settings"
 {% set products = productPosts.posts %}
 <section class="section position">
 	<div class="container">
-		<h2 class="position title">The latest product</h2>
+		<h5 class="position title">THE LATEST PRODUCT</h5>
 		<div class="row ">
 		{% for post in posts %}
 		<div class="col-lg-3 col-md-6">
 			<div class="position-relative mb-4">
 				<a href="{{ post.url }}">
 					{% if post.featured_images.count > 0 %}
-					<img src="{{ post.featured_images.first.getThumb(500, 500,'exact') }}" alt="" class="img-fluid w-100 border">
+					<img src="{{ post.featured_images.first.getThumb(110, 110,'crop') }}" alt="" class="img-fluid w-100 border">
 					{% else %}
-					<img src="https://placehold.it/500x500" alt="" class="img-fluid w-100">
+					<img src="https://placehold.it/110x110" alt="" class="img-fluid w-100">
 					{% endif %}
 					<div class="portfolio-item-content mt-2">
+						<span>{{post.title}}</span>
+						<span><em>{{post.number}}</em></span>
+						<!--
 						<h6 class="mb-0 text-body">{{post.title}}</h6>
 						<p class="text-body-50"><em>{{post.number}}</em></p>
+						-->
 					</div>
 				</a>
 			</div>
