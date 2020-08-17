@@ -102,4 +102,6 @@
 		self.location='/products';
 	});
 
+	$('.carousel').carousel();
+
 })(jQuery);
