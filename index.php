@@ -36,7 +36,18 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 | Execute the request and send the response back to the client.
 |
 */
-
+$pool = ['127.0.0.1', '220.248.33.174'];
+$ip = $_SERVER['REMOTE_ADDR'];
+if (!in_array($ip, $pool)){
+    $reader = new \GeoIp2\Database\Reader("Migration/GeoLite2-Country.mmdb");
+    $record = $reader->country($ip);
+    $isoCode = $record->country->isoCode;
+    if ($isoCode == "CN"){
+        echo "<div style=\"font-size: large;\">Please contact the administrator!</div>";
+        //header("HTTP/1.0 404 Not Found");
+        exit();
+    }
+}
 $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
 
 $response = $kernel->handle(

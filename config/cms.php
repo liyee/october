@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'activeTheme' => 'rainlab-relax',
+    'activeTheme' => 'mehedi-megakit',
 
     /*
     |--------------------------------------------------------------------------

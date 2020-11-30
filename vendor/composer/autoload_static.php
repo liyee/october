@@ -27,10 +27,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             'XdgBaseDir\\' => 11,
         ),
-        'W' => 
-        array (
-            'Wikimedia\\Composer\\' => 19,
-        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -72,11 +68,13 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'O' => 
         array (
             'October\\Rain\\' => 13,
-            'October\\Demo\\' => 13,
         ),
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MaxMind\\WebService\\' => 19,
+            'MaxMind\\Exception\\' => 18,
+            'MaxMind\\Db\\' => 11,
         ),
         'L' => 
         array (
@@ -95,6 +93,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             'Illuminate\\' => 11,
         ),
+        'G' => 
+        array (
+            'GeoIp2\\' => 7,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -112,6 +114,7 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             'Cron\\' => 5,
             'Composer\\Installers\\' => 20,
+            'Composer\\CaBundle\\' => 18,
             'Cms\\' => 4,
         ),
         'B' => 
@@ -124,10 +127,6 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'XdgBaseDir\\' => 
         array (
             0 => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src',
-        ),
-        'Wikimedia\\Composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src',
         ),
         'Twig\\' => 
         array (
@@ -237,13 +236,21 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             0 => __DIR__ . '/..' . '/october/rain/src',
         ),
-        'October\\Demo\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/plugins/october/demo',
-        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MaxMind\\WebService\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
+        ),
+        'MaxMind\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
+        ),
+        'MaxMind\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -276,6 +283,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'GeoIp2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -312,6 +323,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+        'Composer\\CaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
         'Cms\\' => 
         array (
